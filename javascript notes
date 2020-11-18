@@ -806,9 +806,12 @@ function test(val){
 }
 
 console.log(test(7));*/
-
-
-
 // remember to think about the oder in which the if and else statments are flowing, because if you add an else if statement you're running into a problem ealry on.
 
 ///<---------- Chaninig if and else statments --------->
+function sage(val){
+  if (val >= 4){
+  return "Hello";
+  }
+}
+console.log(sage(4));
