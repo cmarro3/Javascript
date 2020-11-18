@@ -1,0 +1,814 @@
+// this is a comment
+/* hello there people
+what are you up to*/
+//data types: null, symbol, number, string, symbol, boolean, and object
+//null means nothing, but symbol is unique,
+/*var myName = "Chris";
+myName = 8;
+
+let ourName = "Christopher Marroquin";
+const pi = 3.14; */
+
+/* <---------->
+    Lesson one */
+/*var a;
+var b = 2;
+console.log(a)
+a = 7;
+b = a;
+console.log(a)*/
+//console.log() allows me to see things in the console.
+// Depending on where I put my consol.log() I can see what my var were before I put change it
+/*
+<---------inizlating varibales --------->
+*/
+// initialzing varriables
+var a = 5;
+var b = 10;
+var c = "I am a string";
+
+// dont change code
+
+a = a + 1;
+b = b + 5;
+c = c + "String";
+
+// decalration
+var studlyCapVar;
+var properCamelCase;
+var titleCaseOver;
+
+// assigement
+studlyCapVar = 10;
+properCamelCase = "A String";
+titleCaseOver = 90000;
+
+// <--- adding numbers ----->
+var sum = 10 +10;
+console.log(sum)
+// <---------->
+// test for my proper declartion
+console.log(titleCaseOver)
+console.log(properCamelCase)
+console.log(studlyCapVar)
+
+// <---- subtracting numbers ------>
+var dif = 45 - 33;
+console.log(dif)
+
+// <--- multiplcation ------>
+var mul = 80*8;
+console.log(mul)
+
+// <----divison of numbers ---- >
+var div = 25 /5;
+console.log(div)
+
+// <---increament a number ---->
+var myVar = 88;
+myVar ++
+// or myVar = myVar  + 1;
+console.log(myVar)
+
+//<--- decreasing numbers---->
+var myVar = 92;
+myVar --;
+// or myVar = myVar - 1;
+console.log(myVar)
+
+// <------decimal mubers ------>
+var deci = 8.9;
+// or floats
+var myDeci = 0.0009;
+
+// <---- multipling decimals ----->
+var product = 2.0 *8.6;
+console.log(product)
+
+// <-----deivind decmials ---->
+var q = 4.4 / 2.2;
+console.log(q)
+
+//<----reminader--->
+
+var remain;
+// %
+remain = 11 % 3;
+console.log(remain)
+// often use to determine if the numb is even or odd
+
+// <------ compond assiments ----->
+var x;
+var y;
+var z;
+
+// modify code here
+
+/*
+x = x + 12;
+y = 9 + y;
+z = z + 7;
+
+this is such a common practice that there's a shortcut
+*/
+
+x+=12;
+y+=9;
+z+=7;
+
+// <---- subtracting comund assigments ------->
+
+var a = 11;
+var b = 9;
+var c = 3;
+
+// same thing we did above just with subtracting
+
+a -= 6;
+b -= 15;
+c -= 1;
+console.log(a)
+console.log(b)
+console.log(c)
+
+//<-------compund woith multiplcation ----->
+var a = 11;
+var b = 9;
+var c = 3;
+
+// samething with the example above
+
+a *= 5;
+b *= 3;
+c *= 10;
+console.log(a,b,c)
+
+// <-----copmund with division --- >
+var a = 11;
+var b = 9;
+var c = 3;
+
+//samething with the example above
+a /= 5;
+b /= 3;
+c /= 10;
+console.log(a,b,c)
+
+//<----decalring strings ---->
+
+var firstName = "Christopher"
+var lastName = "Marroquin"
+
+// change code down below
+
+var firstName = "jesus"
+var lastName = "christ"
+
+//<--------- escaping litteral qotations ----->
+
+var myStr = "I am \"double qouted string\"help me\"fack you\"";
+console.log(myStr)
+
+// the backslash helps with what seprating the quotes
+
+// <------qutation marks with a single qoutes -------->
+
+var myStr = '<a href = "http://www.example.com" target="_blank">Link</a>';
+// the single quote helps me get rid of the back slashes
+
+//<----- escaping the sequences in strings ----->
+/*
+code output
+
+\' single quote
+\" double quote
+\\ backslash
+\n newline
+\r carriage return
+\t tab
+\b backspace
+\f form feed
+*/
+
+var myStr = "First line\n\t\\Secondline\nThirdline";
+console.log(myStr)
+
+//<-----concating strings with plus operations ---- >
+
+var ourStrg = " I come first. " + "I come second.";
+
+// change below
+var myStrg = "This is the start. " + "This is the end.";
+console.log(myStrg)
+console.log(myStrg + ourStrg)
+
+// simple adding of strings
+
+// <-----concaticating string with plus equals operations ------- >
+
+var ourStr = "I come first. ";
+ourStr += "I come second. ";
+console.log(ourStr)
+// change below
+
+var myStr = "This is the first sentece. "
+myStr += "This is the second sentence. "
+console.log(myStr);
+
+// simple adding of senctences with the += symbol
+
+// <----constructing string variables ------>
+
+var ourName = "Christopher Marroquin";
+var outStr = "Hello, my name is " +ourName + ", how are you?";
+console.log(outStr);
+// change code below
+
+var myName = "Jackson Smith";
+var myStr = "My name is " + myName + " and I am well!";
+console.log(myStr);
+
+//<------appending varilbes to strings ------ >
+
+var anAdj = "Awesome!";
+var ourStr = "Christopher is ";
+// or ourStr + anAdj;
+console.log(ourStr + anAdj);
+
+// change below
+
+var someAdj = "Worthless";
+var myStr = "Learning to code is ";
+// or myStr += someAdj;
+console.log( myStr += someAdj);
+
+// <--------finding the length of string ------>
+var firstNameLength = 0;
+var firstName ="Jesse";
+
+firstNameLength = firstName.length;
+
+// we use the .length to find the length of the string
+
+// Setup
+var lastNameLength = 0;
+var lastName = "Chris";
+
+// change below
+
+lastNameLength = lastName.length;
+console.log(lastNameLength);
+
+//<----bracket notaion ----->
+var firstNameLength = "";
+var firstName ="Jesse";
+
+firstNameLength = firstName[0];
+console.log(firstNameLength)
+
+/*
+ or console.log(firstName[0])
+console.log(firstName[1]);
+*/
+// this would print the letter J in jesse
+/*avascript would start from 0 when couting, so that would mean in the example
+above we can see that the index [0] would print J and if we did the same index but with a [1] we would get the letter E. Thus, if did it in javascript we would do this console.log(firstName)*/
+
+// Setup
+var lastNameLength = "";
+var lastName = "Chris";
+
+// change below
+
+lastNameLength = lastName[0];
+console.log(lastNameLength)
+
+//<--------- strings immutable ------>
+
+var myStr = "jello world";
+
+// change below
+
+myStr = "Hello world";
+//myStr[0] = "H"
+// we can't just change the first letter because strings are immutable so we would
+// have to the change the whole thing.
+
+// <----Bracket to fin the last letter ---->
+
+var firstName = "Chris"
+var lastNameOfFirstName = firstName[firstName.length -1];
+
+// set up
+var lastName = "Smith";
+
+// change below
+/*
+just like in all my other computer science classes, -1 will always be the last char in a string
+or like in python there's a pop(-1) blah blah blah
+
+*/
+var lastName = lastName[lastName.length -1];
+console.log(lastName)
+
+//<------- bracket notaion to find other chars in the string ------>
+var firstName = "Chris"
+var lastNameOfFirstName = firstName[firstName.length -3];
+
+// set up
+var lastName = "Marroquin";
+
+// change below
+
+// get's second to last char in the string Marroquin
+
+var lastName = lastName[lastName.length -2];
+console.log(lastName)
+
+//<----Word Blanks --->
+
+// function are used to you know to return somthing dude!
+function wordBlanks(myNoun, myAdj, myVerb, myAdv){
+
+ var result = "";
+  //code goes here
+  result += "The" + " " + myAdj + " " + myNoun + " " + myVerb + " to the store " + myAdv +" . "
+  return result;
+}
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("bike", "slow", "flew", "slowly"));
+// easy to read and it makes sense to me, no explanation
+
+//<-----Store multiple vars into arrays --- >
+
+var ourArray = ["Jhon", 23];
+
+// change code
+
+var myArray = ["Jack", 13];
+
+//<----- Nested arrays ---->
+
+var ourArray = [["My Dad", 34], ["everything", 101010]];
+
+// change code
+
+var myArray = [["Butter", 19], ["Jesus", 45]];
+console.log(myArray[0])
+
+//<------Access Array Data with index--------->
+var ourArray = [50,60,70];
+var ourData = ourArray[0]; // equlas 50
+
+//setup
+var myArray = [50,60,70];
+
+//change code
+var myData = myArray[0];
+console.log(myData);
+
+//<-----Modify Data with indexes------->
+
+var outArray = [16,17,18];
+outArray[1] = 45;
+
+//setup
+
+var myArray = [13,14,15];
+
+//change
+
+myArray[2] = 16;
+console.log(myArray)
+
+// I already know this stuff thansk to python and C++ baby!
+
+//<--------Accessing multi-dimensional arrays with indexes ------->
+
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+//chage here
+
+// prints out 1
+var myData = myArray = [0][0];
+console.log(myData);
+
+// print out 8
+var myData = myArray = [2][1];
+console.log(myData);
+
+//<---Manipulation Arrays with push () ----->
+var ourArray = ["Stevenson", "J", "cat"];
+ourArray.push(["happy", "Joy"])
+console.log(ourArray)
+//pushs strings to the back of the array
+// i.e [stevenson, J, cat, [happy, joy]]
+
+// setup
+var myArray = [["Jhon", 23], ["Cat", 2]];
+//change
+myArray.push(["Sad", "Godly"]);
+console.log(myArray);
+
+//<-------Munipulation arrays with pop()--------->
+
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop();
+console.log(ourArray);
+
+// removes the last function
+
+// setup
+var myArray = [15,16,17];
+// change
+var removeFromMyArray = myArray.pop();
+console.log(myArray);
+
+//<-------Array Munipulation with shift() -------->
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.shift();
+console.log(ourArray);
+
+// removes the first element
+
+// setup
+var myArray = [15,16,17];
+// change
+var removeFromMyArray = myArray.shift();
+console.log(myArray);
+
+//<-------arrays with unshift ------>
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.unshift("fack");
+console.log(ourArray);
+
+// adds element to the begin of the array
+
+// setup
+var myArray = [15,16,17];
+// change
+var removeFromMyArray = myArray.unshift(700);
+console.log(myArray);
+
+//<-------- Shoping List ----------->
+
+var myList = [["Ham", 3], ["milk", 2], ["Bannanas", 6], ["juice", 2], ["eggs", 12]];
+var outPut = "I want to get " + myList[0][1] + " slices of "+ myList[0][0]+ ".";
+console.log(outPut);
+// created an array of arrays which is our shopping list.
+
+//<-------Write resuable code with functions --------->
+
+// so when writing a fuction, make sure to add the () after the name, that's where we take arguemnts in
+/*
+also when you are writing a function you can add a console.log() in it and then declare the name of the func outside the curly braces to call it. Example is down below.
+
+*/
+function ourcode(){
+  console.log("yo");
+}
+
+
+ourcode();
+ourcode();
+ourcode();
+
+function codez(){
+  console.log("Fack you")
+
+}
+codez();
+
+//<------------ passing arugments in a funciton ------->
+
+//simple arugments that take the arguments and when it's call we pass data into the func.
+function jesus(a,b){
+  console.log(a-b);
+
+}
+
+jesus(5,6);
+jesus(7,9);
+jesus(10,2);
+
+// you can use any math method you want dawg
+
+//<------ global and local varibales ------>
+// declare variables here
+var myGlobal = 10;
+
+function fun1(){
+
+  //assign 5 to oppsGlobal
+ var oopsGlobal = 5;
+  // we don't have to use the var keyword because were in a function it will be scoped in the function it belongs to. if dont add var to it will become global automaticly.
+
+}
+// change code
+
+function fun2(){
+  var outPut = "";
+  if(typeof myGlobal !="undefined"){   /* typeof is a JavaScript keyword that will return the type of a variable when you call it. And != means not equal*/
+    outPut+= "myGlobal: "+ myGlobal;
+  }
+  if (typeof oopsGlobal !="undefined"){
+    outPut += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(outPut);
+}
+fun1();
+fun2();
+
+//<---------Local Scope and functions -------->
+
+function myLocal(){
+  var myVar = 5;
+  console.log(myVar);
+  // so when every we decalre a variable, we can use that local var to print out what needs to be printed.
+  // Local vars are only visable within the function.
+}
+myLocal();
+// this console.log() is calling another myVar that's why I get 91, but it shouldn't return anything because
+// it is trying to access my function.
+//console.log(myVar);
+
+//<-------Global vs Local scope in function --------->
+
+var outerWear = "Sweater" // global variable
+
+function myOutfit(){
+
+
+  var outerWear = "T-shirt"; // local variable
+
+  return outerWear;
+
+}
+console.log(myOutfit()); // returns the changed variables ( the local) and print it to console
+console.log(outerWear); // prints out the global variable
+
+//<------- return value from a function with return ---------->
+
+function minuSevens(num)
+{
+ /*  you can return a value within a return function
+ but basicly the return function would return whatever the value is being subtracted, added or multip etc
+ no to hard to figure you since i've used this method in ojbect oriented programming*/
+  return num -7;
+
+}
+console.log(minuSevens(10));
+
+function timesFive(num){
+  //samething here, as long as it passed an argument.
+  return num * 5;
+
+}
+console.log(timesFive(5))
+
+//<----------- undefined values from a return function ------------>
+
+var sum = 0;
+function addThree(){
+
+  sum = sum +3;
+}
+
+function addFive(){
+  sum+= 5;
+}
+//console.log(addFive);
+
+// wont return anything
+
+//<----------------Assigment with return value------------>
+var changed = 0;
+// we setup a var up here
+
+function change(num){
+  return (num + 5) / 3;
+}
+// after this function passes the data it will be store in changed
+
+changed = change (10);
+//which means if I console.log(change(12)) I can get the new value and used changed for other stuff
+// example
+
+console.log(change(12)); // gives 5.66667
+console.log(changed); // gives 5
+
+var processed = 0;
+
+function processArg(num){
+  return (num+3) / 5;
+}
+processed = processArg(7);
+
+//<--------Stand in Line --------->
+
+function next(arr, item){
+
+ // code here
+  arr.push(item); // adds 6 to the back of the array
+
+
+
+  // new iteams go in to front and the old will go out the front
+  // this is a quece in data structues
+
+  return arr.shift();
+
+  // this returns the array without one because the .shift() get rid of it.
+
+  /*The JSON. stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.*/
+
+
+}
+
+var testArr = [1,2,3,4,5];
+
+console.log("Before" + JSON.stringify(testArr));
+console.log(next(testArr, 6));
+console.log("After: "+ JSON.stringify(testArr));
+
+//<----------------------------Boolean Values ---------------->
+
+function welcome(){
+  return false;
+  // or return true;
+}
+
+//<------- if and else statements ------------->
+
+function ourStatment(isItTrue){
+  /*
+  simple if and else statetment, I already masterd this.
+
+  */
+  if(isItTrue){
+    return "Yes this is true";
+  }
+  else{
+    return "No this is not true";
+  }
+}
+
+//console.log(ourStatment(false));
+
+function trueOrFalse(wasItTrue){
+}
+
+//<------------- comparisson with equality operators --------->
+
+function testEqual(val){
+  if(val == 12){ // = means were setting val to = 12 but use == to check if it equals 12
+    return "Equal";
+  }
+  else{
+    return "Not Equal";
+  }
+}
+console.log(testEqual(10));
+
+//<-------=compasion with the strict equality operator ------->
+function testEqual(val){
+  if(val=== 10){
+    /* === means equal value and equal type
+    example: x === 5 (true) or x ==='5'(false)
+    */
+    return "Equal";
+  }
+  else{
+    return "Not Equal";
+  }
+}
+testEqual(10);
+
+//<--------Practice comparing diffrent values ------>
+function compare(a,b){
+  if (a===b){ // here we practice a little more with ===
+    return "Equal";
+  }
+  else{
+    return "Not Equal";
+  }
+}
+console.log(compare(10,"10")); // if we use == it'll be equal and if we use === it's not equal, you know why.
+
+//<------------- compasion with ineqiality operator ------------>
+
+function test(val){
+  if (val != 99){
+    return "Not Equal";
+  }
+  else{
+    return "Equal";
+  }
+}
+console.log(test(10));
+
+//<---------copmasion with strict inquality operator ------>
+
+function test(val){
+  if (val !== 17){
+    return "not equal";
+  }
+  //else
+}
+console.log(test(15))
+
+//<------compasrion with logical and operator ------->
+
+function testGreater(val){
+  if (val > 100){
+    return "Over 100";
+  }
+  if(val >= 10){
+    return "10 or under";
+  }
+}
+console.log(testGreater(10));
+
+//<-----------greater than or or to opertators ----------->
+
+
+  function testGreater(val){
+  if (val >= 100){
+    return "Over 100";
+  }
+  if(val >= 10){
+    return "10 or under";
+  }
+}
+console.log(testGreater(10));
+
+//< ---------- less than operators -------- >
+
+function testGreater(val){
+  if (val < 1000){
+    return "less than 100";
+  }
+  if(val < 17){
+    return "10 or under";
+  }
+}
+console.log(testGreater(10));
+console.log(testGreater(6));
+
+//<----------logical opertaion --------->
+
+function test(val){
+  if (val <= 50 && val >= 25){
+    return "Yes";
+  }
+  return "No";
+}
+
+console.log(test(160));
+
+//<--------- compasrions to logical or operator ------->
+
+function test(val){
+  if(val < 10 || val > 20)
+  return "Outside";
+}
+//<---------- else staments -------->
+
+/*function test(val){
+
+ if (val > 5){
+   var result = " ";
+  result = "bigger than me, chief";
+ }
+
+ else{
+  result = "5 or smaller";
+ }
+  return result;
+}
+
+console.log(test(50));
+
+//<------else if ------->
+
+function test(val){
+  if (val > 5){
+    result = "Bigger than me, chief";
+  }
+
+  else if (val <= 5){
+    result = "5 or smaller";
+  }
+  else{
+    result = "Between 5 and 10";
+  }
+  return result;
+}
+
+console.log(test(7));*/
+
+
+
+// remember to think about the oder in which the if and else statments are flowing, because if you add an else if statement you're running into a problem ealry on.
+
+///<---------- Chaninig if and else statments --------->
