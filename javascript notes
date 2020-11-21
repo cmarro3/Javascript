@@ -1078,3 +1078,197 @@ var playerNumber = 19;
 var player = testObj[playerNumber];
 console.log(playerNumber);
 console.log(player);
+
+// <------Updating Object properties ------>
+var ourDog = {
+  "name": "Camper",
+  "leg": 4,
+  "tails": 1,
+  "friends":["Everything!"]
+};
+ourDog.name = "Happy Camper"
+console.log(ourDog["name"]);
+
+var myDog = {
+  "name": "Jesus",
+  "leg": 10,
+  "tails": 4,
+  "friends":["Jack, Frank, Annie, Joseph, Kevin"]
+};
+myDog.name = "Franky Valley";
+myDog.tails = 2;
+myDog.friends = "No friends";
+
+console.log(myDog["tails"]);
+console.log(myDog["name"]);
+
+//<---------- add new properies -------->
+var myDog = {
+  "name": "Jesus",
+  "leg": 10,
+  "tails": 4,
+  "friends":["Jack, Frank, Annie, Joseph, Kevin"]
+};
+
+myDog.bark = "Rawr";
+myDog.color = "Red";
+myDog.breed = "Poodle";
+myDog['weight'] = 90;
+console.log(myDog);
+
+//<-------deleteing properties from an object ------>
+var myDog = {
+  "name": "Jesus",
+  "leg": 10,
+  "tails": 4,
+  "friends":["Jack, Frank, Annie, Joseph, Kevin"]
+};
+
+delete myDog.tails;
+console.log(myDog);
+
+//<-------- using objects for looking up ------->
+
+function lookup(val){
+  var result = " ";
+
+  var find = {
+    "Bob": "Marley",
+    "Jack": "The Answer",
+    "Joe": "There is no #1",
+    "Chewy": "Missed me by this much"
+  };
+  result = find[val];
+  return result;
+}
+
+console.log(lookup("Bob"));
+
+// <----------- testing ojects for properties ------->
+/* var myDog = {
+  "name": "Jesus",
+  "leg": 10,
+  "tails": 4,
+  "friends":["Jack, Frank, Annie, Joseph, Kevin"]
+};
+function check(checkProp){
+if (myDog.hasOwnProp(checkProp)){
+  return myDog[checkProp];
+}
+else{
+  return "Not found";
+}
+}
+
+console.log(check("leg"));*/
+
+//<-------Manipulating compelx objects----->
+
+/* var music = [
+{
+  "artists": "Kendrick Lamar",
+  "title": "DAMN.",
+  "release_year": 2018,
+  "formats":[
+    "CD",
+    "youtube",
+    "streaming"
+  ],
+  "gold": true
+},
+  // add records here
+  {
+    "artist": "Tupac Shakur",
+    "title": "Me VS The World"
+    "release year": 1997,
+    "formats":[
+      "CD",
+      "Casset Tapes",
+      "Vinyl"
+    ],
+    "gold": true,
+    "silver": false
+  }
+];*/
+
+//<---- accesing nested objects ---->
+/*var myStorage = [
+{
+  "car":{
+    "inside":{
+      "golve box": "gun",
+      "passenger seat": "food"
+    },
+    "outside":{
+      "trunk": "drugs"
+    }
+  }
+}
+
+
+var gloveContent = myStorage.car.inside["glove box"];
+// this should be returning "gun", but there seems to be
+// a syntax error I'm not seeing
+// it says
+console.log(gloveContent);*/
+
+//<--------accessing nested arrays ----- >
+/*var myPlants = [
+  {
+    type:"flowers",
+    list[
+      "roses",
+      "tulips",
+      "danelions"
+    ]
+  },
+  {
+    type:"trees",
+    list[
+      "fir",
+      "pine",
+      "oak"
+    ]
+  }
+];
+
+var second = myPlants[1].list[1];
+console.log(second)*/
+//<------record collection ----->
+// Setup
+var collection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(object, id, prop, value) {
+if(value === " "){
+  delete collection[id][prop];
+}
+else if(prop === "tracks"){
+  collection[id][prop] = collection[id][prop] || [];
+  collection[id][prop].push(value);
+}
+else {
+  collection[id][prop] = value;
+}
+  return object;
+}
+updateRecords(collection, 2468, "tracks", "tests");
+console.log(updateRecords(collection, 5439, 'artist', 'ABBA'));
