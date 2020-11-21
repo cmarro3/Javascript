@@ -1272,3 +1272,26 @@ else {
 }
 updateRecords(collection, 2468, "tracks", "tests");
 console.log(updateRecords(collection, 5439, 'artist', 'ABBA'));
+//<----- intergrate with while loops ------>
+var myArray = [];
+
+var i = 0;
+while(i < 5){
+  myArray.push(i);
+  i++;
+}
+console.log(myArray)
+
+//<---- for loops ----->
+var myArray = [];
+
+for(var i = 1; i < 6; i++){
+  myArray.push(i); // remember .push puts the value into the laste place and returns the new length
+}
+
+var ourArray = [];
+
+for(var i = 1; i < 6; i++){
+  ourArray.push(i);
+}
+console.log(ourArray);
