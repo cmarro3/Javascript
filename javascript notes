@@ -1296,5 +1296,20 @@ for(var i = 1; i < 6; i++){
 }
 console.log(ourArray);
 
+const randomArray = [19,-6,87,34,10];
+for (i = 0; i < randomArray.size; i++){
+  randomArray.push(i);
+}
+console.log(randomArray);
 //<----loops for odds numbers ---->
-/*stopped on 2:13:59*/
+var ourArray = [];
+for(i = 0; i < 10; i += 2){ /* the 1+= 2 is incramenting by 2*/
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+var oddArray = [];
+for(i = 1; i < 10; i+= 2){
+  oddArray.push(i);
+}
+console.log(oddArray);
