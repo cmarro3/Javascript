@@ -1386,3 +1386,286 @@ do {
 } while( i < 5)
 
 console.log(i, myArray);
+/* basiclly the do will do the task at least one time then check for the
+conditions while after doing the task, if false it'll break out of the loop
+ */
+
+//<--------Profile lookup ----->
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(name, prop){
+for(var i = 0; i < contacts.length; i++){
+  if(contacts[i].firstName === name){
+    return contacts[i][prop] || "No such property";
+  }
+}
+  return "No such contact";
+}
+
+var datas = lookUpProfile("Sherlock", "lastName");
+var data = lookUpProfile("Akira", "number");
+console.log(datas);
+console.log(data);
+
+/* from what we can see here we made a function that can lookup
+a profile in our array. The first thing we did was made a for
+loop that went through the contacts length then the increment.
+Then we made a if statment to check if the name is a name
+the contact[i].firstname checks for the firstname property
+in the array, while the [i] is from the for loop that use
+to loop through the array. we use the === to see if the
+firstName (eqaul value) equals to name (equal type) which
+was in our argument when writing the function arguments
+name and prop. Lastly, we return the name is it passes all
+the condtions. So the means it returns the firstName
+and the prop a.k.a the second part of the argument
+which can be whatever depending on the call.  */
+
+//<---- generating random fractions ------>
+
+function randomFrac(){
+
+
+  return Math.random();
+}
+console.log(randomFrac());
+
+// bascilly the Math.random() generates a nunmbeer between
+// 0 and 1 so a random fraction
+
+//<------Generate Random whole numbers --- >
+var randomNum = Math.floor(Math.random() * 20);
+
+function randomWhole(){
+  return Math.floor(Math.random() * 10);
+}
+console.log(randomWhole());
+/* Math.floor rounds down to the nearest whole number
+while if we mutlipe math.random to 20 we get a number between
+0 and 20 but not inclduing 20 but inclduing 0, so 0 to 19. In the example we
+get numbers between 0 and 9 */
+
+//<-----generate random whole numbers with range ----->
+function randomRange(min, max){
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+var myRandom = randomRange(5,15);
+console.log(myRandom);
+
+/*
+We return a function to get a random number within a range
+this is a equations we use to get numbers between 5 and 15
+if you calulate it it's basiclly Math.random * 16 which
+means that it'llget numbers between 5 and 16 but not inclduing
+16 but the Math.floor rounds it down meaning well not get 15 in
+our random generator
+*/
+
+//<---------Use the parseInt function ------>
+
+function convertToInteger(str){
+  return parseInt(str);
+}
+console.log(convertToInteger("56"));
+console.log(convertToInteger("hello"));
+/*
+The parseInt function will return the string value to an integer
+meaning that this would return any number that a string to a
+integer, but this fuction wont return a sting that isn't a
+number
+*/
+
+//<---- Use the parseInt function with Radix ---->
+function covert(str){
+  return parseInt(str, 2);
+}
+console.log(covert("10011"));
+/* The radix would return to a binary num to a int
+the example above returns 19 */
+
+//<-----Use the Conditional (Ternary) operator------->
+/*function check(a,b){
+return a === b ? true: false;
+Ternary operator = condition ? statemnet-if-true : statment-if-fasle
+ this is a Ternary operator
+  if (a === b){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+console.log(check(1,2));*/
+
+//<------- use multiple conditions (Ternary) operators------>
+function checkSign(num){
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+console.log(checkSign(10));
+/*
+A simple nested ternary opertor which would just check
+many conditions before returning what needs to be done.
+This is how the outline would look without the vars in
+place. condition ? state-if-true ? statement-if-true : statment-if-faslse
+*/
+
+/* ES6 JavaScript lessons */
+
+//<------Diffrence between the var and let keywords ----->
+let catname = "Jackson";
+let quote;
+
+let catName = "Skippy";
+
+function catTalk(){
+  "use strict";
+  catName = "Oliver";
+  catName = catName + "says Meow!";
+}
+catTalk();
+// we use let nad const now instead of var
+/*
+We can't delcare things twice in ES6
+only var can do that
+*/
+
+//<---Compare scopes of the words var and let KeyWords ---->
+function checkScope(){
+  "use strict";
+  let i = "function scope";
+  if(true){
+    let i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i);
+  return i;
+}
+console.log(checkScope());
+
+/*
+Var can be delared and used globally while let is only able to
+use locally or in the block of code it's in, so if we run the
+function as it is well get block scope on the console. If we
+change it to let then we'll get function scope for the console.
+// NOTE: let made the function run perfectly and assigned to the right scope
+ */
+
+ //<------Declare a read-only variable with the const keyword ----->
+ function print(str){
+   "use strict";
+
+   const SENTENCE = str + " is cool!";
+   for(let i = 0; i < str.length; i += 2){
+     console.log(SENTENCE);
+   }
+ }
+ print("freeCodeBootcamp");
+// NOTE: when you assign something to const it can't be reassgined
+// NOTE: it is common to see const names with all capital letters
+// NOTE: we used let in the for loop because the i isn't a global variable
+/* As we can see the function is very stright forward and easy to read so
+for now on well be using ES6 syntax, but well still be using var for some
+function that needs it. We can also delcare global variables diffently too
+but I'm getting ahaed of myself.
+*/
+
+//<------Mutate an Array Declare with const ---------->
+const S = [5,7,2];
+
+function edit(){
+  "use strict";
+  // NOTE: S = [2,5,7]; will make errors
+  S[0] = 2;
+  S[1] = 5;
+  S[2] = 7;
+}
+edit();
+console.log(S);
+// NOTE: We can't change things that are under const, but we can change it with bracket notation
+// NOTE: See example above.
+
+//<-------Prevent Object Mutation ----->
+/*function freeze(){
+  "use strict";
+  const MATH_CONST = {
+    PI: 3.14
+    // NOTE: The PI is an object this can still be changed
+  };
+  Object.freeze(MATH_CONST);
+  // NOTE: We use Object.freeze() to keep our data from mutating/changing
+  // NOTE: if we run the function well be getting a type error but the PI will be 3.14
+  try{
+    MATH_CONST.PI = 99;
+  }
+  catch (ex){
+    console.log(ex);
+  }
+  return MATH_CONST.PI;
+}
+const PI = freeze();
+console.log(PI);*/
+
+// NOTE: Our data can still be mutated even if it's a const
+// NOTE: Only objects and arrays can be mutated even under const
+
+//<-------Use Arrow Function to write concise Anonymous Functions ------>
+/*var magic = function(){
+  return new data();
+};
+// NOTE: The function above is a Anonymous fucntion even though it is assigned to magic
+// NOTE: You can convert an Anonymous function to an arrow function
+var magic = () => {
+  return new Data();
+  // NOTE: we can even clean this up more
+}*/
+const magic = () => new Data();
+// NOTE: This is the full function from before the changes
+// NOTE: make sure to use const
+
+//<-------write arrow function with parameters ----->
+//Before
+/* var myConcat = function(arr1, arr2){
+  return arr1.concat(arr2);
+};*/
+// NOTE: After
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+console.log(myConcat([1,2],[3,4,5]));
+
+//<---Writing higher order arrow functions ------>
+const num = [5.6, -9.8, 7.8, 5.5,-7.9, 5, 1,2];
+
+const squareList = (arr) => {
+  const squreInt = arr.filter(num => number .isInteger(num) && num > 0).map(x => x * x);
+  return squreInt;
+};
+
+const squreInt = squareList(num);
+console.log(squreInt);
+// NOTE: whenever one function take another function as an arugment that when we use the arrow
