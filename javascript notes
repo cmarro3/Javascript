@@ -3,20 +3,20 @@
 what are you up to*/
 //data types: null, symbol, number, string, symbol, boolean, and object
 //null means nothing, but symbol is unique,
-/*var myName = "Chris";
+var myName = "Chris";
 myName = 8;
 
 let ourName = "Christopher Marroquin";
-const pi = 3.14; */
+const pi = 3.14;
 
-/* <---------->
-    Lesson one */
-/*var a;
+// <---------->
+  //  Lesson one
+var a;
 var b = 2;
 console.log(a)
 a = 7;
 b = a;
-console.log(a)*/
+console.log(a)
 //console.log() allows me to see things in the console.
 // Depending on where I put my consol.log() I can see what my var were before I put change it
 /*
@@ -219,7 +219,7 @@ console.log(myStr);
 
 // <----constructing string variables ------>
 
-var ourName = "Christopher Marroquin";
+/*var ourName = "Christopher Marroquin";
 var outStr = "Hello, my name is " +ourName + ", how are you?";
 console.log(outStr);
 // change code below
@@ -1311,5 +1311,78 @@ console.log(ourArray);
 var oddArray = [];
 for(i = 1; i < 10; i+= 2){
   oddArray.push(i);
-}
+} // changing the i = 1 will print out the odd
 console.log(oddArray);
+//<-------Count Backwards with a For loop ------->
+var myArray = [];
+for(var i = 10; i > 0; i -= 2){
+  myArray.push(i);
+  /* We can see here that when we set i = 10
+  we will be starting at 10, now the i > 0 will
+  take us back to zero. while the i -= 2 will count down
+  by two*/
+}
+console.log(myArray);
+
+//<-------- Iterate Through an Array with a For Loop-------->
+// example
+var ouArr = [9,10,11,12];
+var ourTotal = 0;
+
+for (var i = 0; i < ouArr.length; i++){
+  ourTotal += ouArr[i];
+  /* As we can see we already have our vars in place
+  while the for loop we can see that
+  we set the inziler to 0 and the i < ouArra.lenght
+  meaning were using the lenght of the array to
+  add all the numbers that are avabile in the
+  array the .length just gets the lenght of the array*/
+}
+console.log(ourTotal);
+var myArr = [1,2,3,4,5,6];
+var totalUp = 0;
+
+for(var i = 0; i < myArr.length; i++){
+  totalUp += myArr[i];
+}
+console.log(totalUp);
+
+//<------- Nesting for Loops------->
+
+function multi(arr){
+  var pro = 1;
+  for(var i = 0; i < arr.length; i++){
+    for(var j = 0; j < arr[i].length; j++){
+      pro *= arr[i][j];
+    }
+  }
+  return pro
+}
+
+var pro = multi([[1,2],[3,4],[5,6,7]]);
+console.log(pro);
+/* we can see here that were passing a nested for loop
+to get the product of the array that we have we start
+with var = 1 so when we mutlipe the function it will
+equal itself. The next thing is that we set a for loop
+for the first array so we can loop unil array length is met
+as we can see, the first array has only three elements. The
+next thing is we set another for loop for the second array
+that has the numbers inside the three elements. We set j to 0
+and we add a j < arr.[i].length which means the for loop in goes
+inside the three elements and loops the numbers inside to do what
+we want (multiplcation) so then we add a simple pro *= arr[i][j]
+which then gives us the final muber we need*/
+
+//<------- interate with do ..while loops --->
+var myArray = [];
+var i = 10;
+
+// change this code
+
+do {
+  myArray.push(i);
+  i++;
+} while( i < 5)
+
+console.log(i, myArray);
